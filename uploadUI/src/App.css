@@ -87,7 +87,7 @@ main {
 
 .uploadBox {
   background-color: ghostwhite;
-  border: 2px dashed rgba(0, 0, 0, 0.205);
+  border: 2px dashed rgba(0, 128, 128, 0.589);
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -101,7 +101,7 @@ main {
 .uploadContainer span {
   text-align: center;
   font-size: 3rem;
-  color: green;
+  color: teal;
 }
 
 .uploadText {

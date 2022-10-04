@@ -7,10 +7,10 @@ import { ImageFileFormat } from "./ImgFileType";
 
 const demoData = [
   {
-    fileName: "sample.jpeg",
-    fileSize: 20,
-    fileType: "png",
-    fileImageFormat: "pdf",
+    fileName: "sample.txt",
+    fileSize: 15,
+    fileType: "txt",
+    fileImageFormat: "txt",
     id: nanoid(),
   },
 ];
@@ -28,6 +28,8 @@ const App = () => {
     const fileSize = fileToUpload.size;
     const fileType = fileToUpload.type;
     const fileImageFormat = fileType.split("/")[1];
+    console.log(fileType, fileImageFormat, ImageFileFormat[fileImageFormat]);
+
     currentID = nanoid();
 
     const newFile = {
@@ -91,7 +93,7 @@ const App = () => {
                         <img
                           src={
                             ImageFileFormat[file.fileImageFormat] ||
-                            ImageFileFormat.default
+                            ImageFileFormat["default"]
                           }
                           alt=""
                         />
