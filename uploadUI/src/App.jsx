@@ -1,5 +1,5 @@
-import React from "react";
 import { useState } from "react";
+import prettyBytes from "pretty-bytes";
 import "./App.css";
 import axios from "axios";
 import { nanoid } from "nanoid";
@@ -8,7 +8,7 @@ import { ImageFileFormat } from "./ImgFileType";
 const demoData = [
   {
     fileName: "sample.jpeg",
-    fileSize: "20 mb",
+    fileSize: 20,
     fileType: "png",
     fileImageFormat: "pdf",
     id: nanoid(),
@@ -100,7 +100,9 @@ const App = () => {
                         <div className="nameSizeDelete">
                           <div className="left">
                             <span className="name">{file.fileName}</span>
-                            <span className="size">{file.fileSize}</span>
+                            <span className="size">
+                              {prettyBytes(file.fileSize)}
+                            </span>
                           </div>
                           <div
                             className="right"
