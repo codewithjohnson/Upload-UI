@@ -28,7 +28,6 @@ const App = () => {
     const fileSize = fileToUpload.size;
     const fileType = fileToUpload.type;
     const fileImageFormat = fileType.split("/")[1];
-    console.log(fileType, fileImageFormat, ImageFileFormat[fileImageFormat]);
 
     currentID = nanoid();
 

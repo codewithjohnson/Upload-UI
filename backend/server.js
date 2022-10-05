@@ -4,10 +4,6 @@ const fileUpload = require("express-fileupload");
 const app = express();
 app.use(fileUpload());
 
-app.get("/back", (req, res) => {
-  res.json({ message: "hello muyiwa" });
-});
-
 app.post("/uploadFile", (req, res) => {
   let filePath;
   if (req.files === null) {
